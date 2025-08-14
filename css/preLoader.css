@@ -1,0 +1,31 @@
+:root {
+  --primary-color: #edf6f9;
+  --secondary-color: #001219;
+  --white-two: #ced4da;
+  --black-two: #22223b;
+}
+
+div#preLoader {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+div#preLoader div#status {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  background-image: url("../src/media/images/preLoader.gif");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -35px;
+  margin-left: -35px;
+}
