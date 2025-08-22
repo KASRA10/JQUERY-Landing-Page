@@ -11,6 +11,8 @@
   --secondary-color: #001219;
   --white-two: #ced4da;
   --black-two: #22223b;
+  --overlay-color: rgba(0, 0, 0, 0.6);
+  --default-radius: 15px;
 }
 
 html {
@@ -28,6 +30,7 @@ body {
   outline: none;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
+  text-transform: capitalize;
 }
 
 img {
@@ -96,6 +99,67 @@ div.videoSlide video#headerVideoSlid {
   height: auto;
   z-index: 0;
   object-fit: cover;
+  filter: blur(4px);
+}
+
+div.videoSlide div.videoOverlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  background-color: var(--overlay-color);
+  text-align: center;
+}
+
+div.videoSlide div.videoOverlay div.videoTextContent {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.videoSlide div.videoOverlay div.videoTextContent h1#mainTitle {
+  color: var(--primary-color);
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+div.videoSlide div.videoOverlay div.videoTextContent h1#mainTitle + em {
+  color: var(--primary-color);
+}
+
+button.themeButton {
+  display: block;
+  width: 150px;
+  margin: 15px auto;
+  padding: 20px;
+  border: 3px solid var(--primary-color);
+  border-radius: var(--default-radius);
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+button.themeButton a {
+  color: var(--primary-color);
+  font-size: 16px;
+}
+
+button.themeButton:hover {
+  transition: all 0.6s ease-in-out;
+  background-color: var(--primary-color);
+}
+
+button.themeButton:hover a {
+  transition: all 0.6s ease-in-out;
+  color: var(--secondary-color);
 }
 /* End Of Video Slide */
 /* End Of Body */
