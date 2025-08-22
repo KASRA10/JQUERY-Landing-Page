@@ -1,5 +1,9 @@
 $(window).on("load", function () {
-  setTimeout(hidePreload, 3000);
+  setTimeout(function () {
+    hidePreload();
+
+    $(".videoTextContent").animate({ opacity: 1 }, 5000);
+  }, 3000);
 });
 
 $(document).ready(function () {});
