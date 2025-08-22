@@ -4,6 +4,8 @@ $(window).on("load", function () {
 
 $(document).ready(function () {});
 
+// Functions
 function hidePreload() {
   $("#preLoader").delay(300).fadeOut("slow");
 }
+// End Of Functions
